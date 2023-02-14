@@ -13,9 +13,9 @@ describe('rotatingDancer', function() {
   });
 
   it('should have a step function that makes its node rotate', function() {
-    sinon.spy(rotatingDancer.$node, 'rotate');
+    sinon.spy(rotatingDancer.$node, 'css');
     rotatingDancer.step();
-    expect(rotatingDancer.$node.rotate.called).to.be.true;
+    expect(rotatingDancer.$node.css.called).to.be.true;
     // may need to change rotatingDancer.$node.rotate.called name given 'rotate' method call
   });
 

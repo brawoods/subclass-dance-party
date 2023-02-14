@@ -1,5 +1,5 @@
 var makeRotatingDancer = function (top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps / 10); // <=============
+  makeDancer.call(this, top, left, timeBetweenSteps); // <=============
 
 
   // declare a degree property
@@ -18,7 +18,7 @@ makeRotatingDancer.prototype.step = function() {
   // real step
   // change degree
   // console.log('rotate-ish');
-  this.degree += 1;
+  this.degree += 10;
   this.degree %= 360;
 
   this.$node.css({rotate: this.degree + 'deg'}); // <========

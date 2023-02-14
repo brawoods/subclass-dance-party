@@ -38,5 +38,3 @@ makeDancer.prototype.setPosition = function (top, left) {
 
   this.$node.css(styleSettings);
 };
-// debugger;
-var asdf = new makeDancer(10, 20, 100);

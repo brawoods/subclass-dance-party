@@ -1,14 +1,27 @@
 var makeRotatingDancer = function (top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+  makeDancer.call(this, top, left, timeBetweenSteps / 10); // <=============
+
+
+  // declare a degree property
+  this.degree = 0; // <=======
 };
 
-makeRotatingDancer.prototype = Object.call(makeDancer.prototype);
+makeRotatingDancer.prototype = Object.create(makeDancer.prototype);
 makeRotatingDancer.prototype.constructor = makeRotatingDancer;
 
+// METHODS
+// step that will rotate the element
+// rotate => by changing CSS transform class' value
+makeRotatingDancer.prototype.step = function() {
+  // invoke 'oldStep' => setTimeout
+  makeDancer.prototype.step.call(this);
+  // real step
+  // change degree
+  // console.log('rotate-ish');
+  this.degree += 1;
+  this.degree %= 360;
 
-// $("a.shownav img").css("transform", "rotate(180deg)")
-
-// jQuery.fn.rotate = function(degrees) {
-//   $(this).css({'transform' : 'rotate('+ degrees +'deg)'});
-//   return $(this);
-// };
+  this.$node.css({rotate: this.degree + 'deg'}); // <========
+  ////// Minseok playing around //////
+  // this.$node.animate()
+};

@@ -23,7 +23,7 @@ makeDancer.prototype.step = function () {
   // it just schedules the next step
   var stepTime = this.stepTime;
   var currentDancer = this;
-  debugger;
+  // debugger;
   setTimeout(currentDancer.step.bind(this), stepTime);
 };
 
@@ -33,7 +33,8 @@ makeDancer.prototype.setPosition = function (top, left) {
   //
   var styleSettings = {
     top: top,
-    left: left
+    left: left,
+    rotate: '0deg' // < new edit
   };
 
   this.$node.css(styleSettings);

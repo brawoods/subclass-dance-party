@@ -2,6 +2,10 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 //   // makedancer.call(this); <= makeBlinkyDancer.makeDancer(top, left, timeBetweenSteps);
   makeDancer.call(this, top, left, timeBetweenSteps);
 
+  // this.$node => <span class="blinkyDancer">
+  // <img src=/img/pikachu.png>
+  //</span>
+
 };
 
 // // connect makeBlinkyDancer and makeDancer po
